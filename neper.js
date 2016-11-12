@@ -12,6 +12,10 @@
 const argv = require("argv");
 const n = argv.run().targets[0];
 
+// tool
+var tool = require("./lib/tool");
+const factorial = tool.factorial;
+
 var e = 0;
 e += 1;
 
@@ -20,11 +24,3 @@ for (var i = 1; i < n; i++) {
 }
 
 console.log(e);
-
-function factorial(n) {
-    var a = 1;
-    for (var i = 1; i <= n; i++) {
-        a *= i;
-    }
-    return a;
-}
