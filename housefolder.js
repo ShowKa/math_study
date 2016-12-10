@@ -4,15 +4,21 @@
 // A'' = diag(I2, H) * A' * diag(I2, H)
 
 const Matrix = require("./lib/Matrix");
+const DiagMatrix = require("./lib/DiagMatrix");
 
 let a = new Matrix([
+    [1],
+    [1],
+    [1],
+    [1]
+]);
+
+
+let c = new Matrix([
     [1, 2],
     [3, 4]
 ]);
+let b = new DiagMatrix(1, 1, c, 1, c, 1, 1, c);
+console.log(b);
 
-let b = new Matrix([
-    [5, 6],
-    [7, 8]
-]);
-
-console.log(a.times(b));
+a.housefolder();
