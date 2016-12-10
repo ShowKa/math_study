@@ -15,8 +15,9 @@ let a = new Matrix([
 
 
 let c = new Matrix([
-    [1, 2],
-    [3, 4]
+    [1, 2, 3],
+    [3, 4, 5],
+    [7, 8, 9]
 ]);
 let b = new DiagMatrix(1, 1, c, 1, c, 1, 1, c);
 console.log(b);
