@@ -4,13 +4,12 @@
 // A'' = diag(I2, H) * A' * diag(I2, H)
 
 const Matrix = require("./lib/Matrix");
-const DiagMatrix = require("./lib/DiagMatrix");
 
 let a = new Matrix([
-    [1],
-    [1],
-    [1],
-    [1]
+    [1, 2, 3, 4],
+    [1, 2, 3, 4],
+    [1, 2, 3, 4],
+    [1, 2, 3, 4]
 ]);
 
 a.housefolder();
