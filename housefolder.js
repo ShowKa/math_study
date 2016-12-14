@@ -20,9 +20,9 @@ let b = new Matrix([
     [5, 7, 9]
 ]);
 
-// let [low, up] = b.getLU();
-// l(low);
-// l(up);
+let [low, up] = b.getLU();
+l(low);
+l(up);
 
 let c = new Matrix([
     [8, 16, 24, 32],
