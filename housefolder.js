@@ -20,9 +20,9 @@ let b = new Matrix([
     [5, 7, 9]
 ]);
 
-let [low, up] = b.getLU();
-l(low);
-l(up);
+let [p1, low1, up1] = b.getLU();
+l(low1);
+l(up1);
 
 let c = new Matrix([
     [8, 16, 24, 32],
@@ -31,6 +31,19 @@ let c = new Matrix([
     [7, 22, 46, 105]
 ]);
 
-let [low2, up2] = c.getLU();
+let [p2, low2, up2] = c.getLU();
 l(low2);
 l(up2);
+
+let d = new Matrix([
+    [8, 0, 24, 32],
+    [2, 0, 12, 17],
+    [6, 17, 32, 59],
+    [7, 22, 46, 105]
+]);
+
+let [p3, low3, up3] = d.getLU();
+l(p3);
+l(low3);
+l(up3);
+l(p3.product(low3).product(up3));
