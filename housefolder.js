@@ -13,7 +13,7 @@ let a = new Matrix([
     [-2, 0, 3, -2],
     [2, 1, -2, -1]
 ]);
-l(a.housefolder());
+l(a.householder());
 
 // linear equation
 let b = new Matrix([
