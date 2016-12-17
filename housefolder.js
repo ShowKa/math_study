@@ -8,12 +8,12 @@ const Matrix = require("./lib/Matrix");
 const Vector = require("./lib/Vector");
 
 let a = new Matrix([
-    [4, 2, 3, 4],
-    [1, 2, 3, 4],
-    [-2, 2, 3, 4],
-    [2, 2, 3, 4]
+    [4, 1, -2, 2],
+    [1, 2, 0, 1],
+    [-2, 0, 3, -2],
+    [2, 1, -2, -1]
 ]);
-a.housefolder();
+l(a.housefolder());
 
 // linear equation
 let b = new Matrix([
