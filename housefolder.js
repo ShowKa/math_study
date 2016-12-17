@@ -5,6 +5,7 @@
 const l = console.log;
 
 const Matrix = require("./lib/Matrix");
+const Vector = require("./lib/Vector");
 
 let a = new Matrix([
     [4, 2, 3, 4],
@@ -16,34 +17,12 @@ let a = new Matrix([
 a.housefolder();
 
 let b = new Matrix([
-    [2, 6, 4],
-    [5, 7, 9]
+    [1, 1, 1],
+    [3, 2, -2],
+    [2, -1, 3]
 ]);
 
-let [p1, low1, up1] = b.getLU();
-l(low1);
-l(up1);
+let v = new Vector(6, 1, 9);
 
-let c = new Matrix([
-    [8, 16, 24, 32],
-    [2, 7, 12, 17],
-    [6, 17, 32, 59],
-    [7, 22, 46, 105]
-]);
-
-let [p2, low2, up2] = c.getLU();
-l(low2);
-l(up2);
-
-let d = new Matrix([
-    [8, 0, 24, 32],
-    [2, 0, 12, 17],
-    [6, 17, 32, 59],
-    [7, 22, 46, 105]
-]);
-
-let [p3, low3, up3] = d.getLU();
-l(p3);
-l(low3);
-l(up3);
-l(p3.product(low3).product(up3));
+let answer = b.linearEquation(v);
+l(answer);
