@@ -44,3 +44,11 @@ let p = new Matrix([
 ]);
 
 l(d.transformSimilarity(p));
+
+let e = new Matrix([
+    [1, -2, 3, 2],
+    [-2, 2, 0, 2],
+    [2, 4, -1, -2],
+    [3, 5, -7, -6]
+]);
+l(e.getDeterminant());
