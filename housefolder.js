@@ -13,8 +13,8 @@ let a = new Matrix([
 let [Q, R] = a.getQR();
 l(Q);
 l(R);
-l(Q.product(R));
-l(a.getHessenberg());
+// l(Q.product(R));
+// l(a.getHessenberg());
 
 // linear equation
 let b = new Matrix([
@@ -54,3 +54,12 @@ let e = new Matrix([
     [3, 5, -7, -6]
 ]);
 l(e.getDeterminant());
+
+// EigenValue
+let f = new Matrix([
+    [2, 0, 0],
+    [0, 3, 4],
+    [0, 4, 9]
+]);
+
+l(f.getEigenValue());
