@@ -7,13 +7,18 @@ const l = console.log;
 const Matrix = require("./lib/Matrix");
 const Vector = require("./lib/Vector");
 
+// QR
 let a = new Matrix([
     [4, 1, -2, 2],
     [1, 2, 0, 1],
     [-2, 0, 3, -2],
     [2, 1, -2, -1]
 ]);
-l(a.householder());
+let [Q, R] = a.getQR();
+l(Q);
+l(R);
+l(Q.product(R));
+// l(a.getHassenberg());
 
 // linear equation
 let b = new Matrix([
@@ -45,6 +50,7 @@ let p = new Matrix([
 
 l(d.transformSimilarity(p));
 
+// Determinant
 let e = new Matrix([
     [1, -2, 3, 2],
     [-2, 2, 0, 2],
