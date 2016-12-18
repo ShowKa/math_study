@@ -1,7 +1,3 @@
-// H = I -2 * u * u^T
-// u = ( x - √ ( x^2 + y^2 + z^2 ) , y, z )^t  && |u| = 1
-// A' = diag(1, H) * A * diag(1, H)
-// A'' = diag(I2, H) * A' * diag(I2, H)
 const l = console.log;
 
 const Matrix = require("./lib/Matrix");
@@ -18,7 +14,7 @@ let [Q, R] = a.getQR();
 l(Q);
 l(R);
 l(Q.product(R));
-// l(a.getHassenberg());
+l(a.getHessenberg());
 
 // linear equation
 let b = new Matrix([
