@@ -71,11 +71,11 @@ let g = new Matrix([
     [0, 0, 1, 3]
 ]);
 
-// l(g.getEigenValue());
+l(g.getEigenValue());
 
 let h = new Matrix([
     [2, 1],
     [-0.5, -1.5]
 ]);
 
-// l(h.getEigenValue());
+l(h.getEigenValue());
